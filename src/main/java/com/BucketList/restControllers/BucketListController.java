@@ -2,7 +2,10 @@ package com.BucketList.restControllers;
 
 import com.BucketList.entities.*;
 import com.BucketList.repositories.BucketListRepository;
+import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.server.ResponseStatusException;
+
 import java.util.List;
 
 @RestController
@@ -28,12 +31,12 @@ public class BucketListController {
 
     @PutMapping("/{id}")
     public BucketItem update(@PathVariable Long id, @RequestBody BucketItem updated){
-        return repository.findById(id).map(item->{
+        return repository.findById(id).map(item -> {
             item.setTitle(updated.getTitle());
             item.setDescription(updated.getDescription());
             item.setCompleted(updated.isCompleted());
             return repository.save(item);
-        }).orElseThrow(()-> new RuntimeException("Item not found"));
+        }).orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Item not found"));
     }
 
     @DeleteMapping("/{id}")
