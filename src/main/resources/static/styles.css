@@ -1,0 +1,77 @@
+body {
+    background-color: #f8f9fa;
+    background-image: url('BackgroundImg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+}
+
+.bucket-container {
+    max-width: 700px;
+    background-color: rgba(255, 255, 255, 0.30); /* white with 85% opacity */
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+li.list-group-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 8px;
+}
+
+li.list-group-item .completed {
+    text-decoration: line-through;
+    color: gray;
+}
+
+li.list-group-item div.flex-grow-1 {
+    min-width: 200px;
+}
+
+li.list-group-item .btn-group button {
+    margin-left: 5px;
+}
+
+.btn-edit {
+    background-color: #5dade2; /* soft sky blue */
+    color: white;
+    border: none;
+}
+
+.btn-toggle {
+    background-color: #2980b9; /* medium royal blue */
+    color: white;
+    border: none;
+}
+
+.btn-delete {
+    background-color: #1b4f72; /* dark blue */
+    color: white;
+    border: none;
+}
+
+.btn-edit:hover,
+.btn-toggle:hover,
+.btn-delete:hover {
+    opacity: 0.85; /* subtle hover effect */
+}
+
+.btn-edit, .btn-toggle, .btn-delete {
+    border-radius: 8px;
+}
+
+.completed {
+    text-decoration: line-through;
+    color: gray;
+}
+
+@media (max-width: 576px) {
+    li.list-group-item .btn-group button {
+        margin-left: 0;
+        margin-top: 5px;
+    }
+}
