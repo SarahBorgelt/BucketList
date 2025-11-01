@@ -1,6 +1,6 @@
 package com.BucketList.restControllers;
 
-import com.BucketList.entities.BucketItem;
+import com.BucketList.model.BucketItem;
 import com.BucketList.repositories.BucketListRepository;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;

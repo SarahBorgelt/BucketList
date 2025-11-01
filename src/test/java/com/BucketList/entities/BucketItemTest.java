@@ -1,5 +1,6 @@
 package com.BucketList.entities;
 
+import com.BucketList.model.BucketItem;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
