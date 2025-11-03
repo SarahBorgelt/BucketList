@@ -5,15 +5,31 @@
     <meta name="viewport"
           content="width=device-width, initial-scale=1.0">
     <title>Bucket List</title>
+    <!--    Import Bootstrap-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+<!--Use bootstrap to add styling:
+    - bucket-container - custom class
+    - container - Bootstrap layout container that centers content and applies responsive horizontal padding. It keeps the
+                  content from stretching edge-to-edge on large screens
+    - mt-5 - margin-top with spacing 5. This serves the purpose of adding space above the div
+    - p-4 - adds padding on all sides and gives inner space between the content and div border
+    - bg-white - sets the background color to white
+    - rounded - adds rounded corners to the div
+    - shadow-sm - adds a small drop shadow for visual separation from the page background-->
 <div class="bucket-container container mt-5 p-4 bg-white rounded shadow-sm">
     <h1 class="mb-4 text-center">🪣 My Bucket List</h1>
 
+    <!--Add Bootstrap classes for styling:
+        - mb-4 - adds vertical spacing below the header
+        - text-center - centers the heading on the page-->
     <form id="addForm" class="mb-4">
+        <!--mb-3 adds vertical spacing below the <div> -->
         <div class="mb-3">
+            <!--form-label adds styling to match Bootstrap's form styles, whereas form-control styles the input
+             to be full-width (with padding, border, and rounded corners consistent with Bootstrap forms-->
             <label for="title" class="form-label">Title</label>
             <input type="text" id="title" class="form-control" placeholder="Enter a new bucket list item" required/>
         </div>
@@ -21,9 +37,13 @@
             <label for="description" class="form-label">Description</label>
             <textarea id="description" class="form-control" placeholder="Add details (optional)" rows="2"></textarea>
         </div>
+        <!--Add Bootstrap styling:
+            - btn - adds base Bootstrap button styling (padding, border, font, hover effects)
+            - btn-primary - gives the button the primary color theme and sets hover/active styles
+            - w-100 makes the button the full width of the container-->
         <button type="submit" class="btn btn-primary w-100">Add Item</button>
     </form>
-
+    <!--list-group turns the <ul> into a Bootstrap-styled list group with consistent borders, padding, and hover effects for the list items -->
     <ul id="list" class="list-group"></ul>
 </div>
 

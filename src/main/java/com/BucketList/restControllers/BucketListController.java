@@ -66,12 +66,12 @@ public class BucketListController {
     @DeleteMapping("/{id}")
     public void delete(@PathVariable Long id){
         try{
+            //check if the id exists first. If it doesn't, then provide an exception that it wasnt found
             if (!repository.existsById(id)) {
                 throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Item not found");
             }
             repository.deleteById(id);
-        } catch (ResponseStatusException e){
-            throw e;
+            //if there are any other errors, throw an internal server error
         } catch(Exception e){
             throw new ResponseStatusException(HttpStatus.INTERNAL_SERVER_ERROR);
         }
