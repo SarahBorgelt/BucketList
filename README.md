@@ -50,6 +50,7 @@ Many people have goals and dreams, but keeping track of them can be challenging.
 - **ORM:** Spring Data JPA / Hibernate
 - **Build Tool:** Maven
 - **Styling:** Bootstrap 5.3 + custom CSS
+- **Version Control:** Git
 
 ---
 
@@ -57,20 +58,17 @@ Many people have goals and dreams, but keeping track of them can be challenging.
 
 ### 1. Clone the repository
     git clone <https://github.com/SarahBorgelt/BucketList.git>
-    
-### 2. Open the repository
-Run the below command in terminal to open the file location
 
-    cd BucketList
-
-### 3. Configure PostgreSQL
+### 2. Configure PostgreSQL
 In the application.properties (src/main/resources/application.properties) file,
 update the datasource password to your PostgreSQL password and ensure that the 
 database exists on your machine. 
 
-### 4. Run Maven in your terminal in the project root
-    mvn spring-boot:run
+### 3. Start the application
+**macOS/Linux:** Double-click the startBucketList.command file in the project folder to launch the app in a terminal.
 
-### 5. The app will start on http://localhost:8080
+**Windows:** Double-click the startBucketList.bat file to launch the app.
+
+### 4. The app will start on http://localhost:8080
 
 

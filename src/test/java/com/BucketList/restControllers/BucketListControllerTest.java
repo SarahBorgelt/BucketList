@@ -85,8 +85,8 @@ public class BucketListControllerTest {
                         //Provides the JSON payload for the item being created to mimic what a client would send when adding a new bucket list item
                         .content("{\"title\": \"Skydiving\", \"description\": \"Jump from a plane\", \"completed\": false}"))
 
-                //Is the HTTP response status code 200 OK?
-                .andExpect(status().isOk())
+                //Is the HTTP response status code 201 Created?
+                .andExpect(status().isCreated())
 
                 //Check the returned JSON response. Does it match what we sent?
                 .andExpect(jsonPath("$.title").value("Skydiving"));
@@ -147,6 +147,9 @@ public class BucketListControllerTest {
 
     @Test
     void deleteItem_RemovesFromRepository() throws Exception {
+        //Pretend that the item exists
+        when(repository.existsById(1L)).thenReturn(true);
+
         //doNothing() tells that mock: "When deleteById(1L) is called, just pretend it succeeds and don't throw an exception."
         doNothing().when(repository).deleteById(1L);
 
