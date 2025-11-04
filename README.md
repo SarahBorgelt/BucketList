@@ -61,14 +61,22 @@ Many people have goals and dreams, but keeping track of them can be challenging.
 
 ### 2. Configure PostgreSQL
 In the application.properties (src/main/resources/application.properties) file,
-update the datasource password to your PostgreSQL password and ensure that the 
-database exists on your machine. 
+update the datasource username and password to your PostgreSQL credentials.
 
-### 3. Start the application
-**macOS/Linux:** Double-click the startBucketList.command file in the project folder to launch the app in a terminal.
+### 3. Create the database
+In PostgreSQL, create a database entitled "BucketList". Once created, right-click on it
+and select "Query Tool". Click on the folder icon to open a folder and navigate to the
+"BucketList.sql" file in the root directory. Open the "BucketList.sql" file and execute
+the script to create the necessary columns.
 
-**Windows:** Double-click the startBucketList.bat file to launch the app.
+- *It should be noted that if you already have a table entitled "bucket_item",
+that table will be deleted and a new one will be created. Proceed with caution.*
 
-### 4. The app will start on http://localhost:8080
+### 4. Start the application
+- **macOS/Linux:** Double-click the startBucketList.command file in the project folder to launch the app in a terminal.
+
+- **Windows:** Double-click the startBucketList.bat file to launch the app.
+
+### 5. The app will start on http://localhost:8080
 
 
