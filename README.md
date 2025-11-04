@@ -73,9 +73,9 @@ the script to create the necessary columns.
 that table will be deleted and a new one will be created. Proceed with caution.*
 
 ### 4. Start the application
-- **macOS/Linux:** Double-click the startBucketList.command file in the project folder to launch the app in a terminal.
+- **macOS/Linux:** Double-click the start-mac-or-linux.command file in the project folder to launch the app in a terminal.
 
-- **Windows:** Double-click the startBucketList.bat file to launch the app.
+- **Windows:** Double-click the start-windows.bat file to launch the app.
 
 ### 5. The app will start on http://localhost:8080
 
