@@ -1,6 +1,6 @@
 package com.BucketList.repositories;
 
-import com.BucketList.model.BucketItem;
+import com.BucketList.entities.BucketItem;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 //By extending JpaRepository, Spring automatically provides standard CRUD operations without requiring SQL

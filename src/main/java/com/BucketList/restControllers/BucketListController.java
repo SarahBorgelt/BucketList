@@ -1,6 +1,6 @@
 package com.BucketList.restControllers;
 
-import com.BucketList.model.*;
+import com.BucketList.entities.BucketItem;
 import com.BucketList.repositories.BucketListRepository;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

@@ -1,4 +1,4 @@
-package com.BucketList.model;
+package com.BucketList.entities;
 
 import jakarta.persistence.*;
 
